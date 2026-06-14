@@ -1,0 +1,26 @@
+# ======================================================
+# Claude / Anthropic 分流规则
+# 适用客户端：Stash / Surge / Shadowrocket / Quantumult X
+# 更新日期：2026-06-14
+# 说明：建议策略设置为「代理」或「自动选择」
+#      Claude 对 IP 地区较敏感，建议使用美国等支持地区节点
+# ======================================================
+
+# ---- 官网 & API（api / console / www.anthropic.com）----
+DOMAIN-SUFFIX,anthropic.com
+
+# ---- Claude Web / App ----
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+
+# ---- 用户内容 / Artifacts / 文件上传 ----
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# ---- 页面统计 / 分析（claude.ai 前端依赖）----
+DOMAIN,cdn.usefathom.com
+
+# ---- 关键词兜底（防漏匹配）----
+DOMAIN-KEYWORD,anthropic
+# 注意：claude 关键词较宽泛，极少数无关域名（如含 "claude" 的地名站点）可能误命中，
+#      如遇误判可注释掉下一行
+DOMAIN-KEYWORD,claude

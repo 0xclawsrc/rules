@@ -1,0 +1,55 @@
+# ======================================================
+# 长桥证券 (Longbridge) 分流规则
+# 适用客户端：Stash / Surge / Shadowrocket / Quantumult X
+# 更新日期：2026-06-14
+# 说明：建议策略设置为「代理」或「自动选择」
+# ======================================================
+
+# ---- 主站 & 官网 ----
+DOMAIN-SUFFIX,longbridge.com
+DOMAIN-SUFFIX,longbridge.global
+DOMAIN-SUFFIX,longbridge.hk
+DOMAIN-SUFFIX,longbridge.sg
+DOMAIN-SUFFIX,longbridge.us
+DOMAIN-SUFFIX,longbridge.cn
+
+# ---- APP 核心域名（longbridgeapp 旧域名体系）----
+DOMAIN-SUFFIX,longbridgeapp.com
+DOMAIN-SUFFIX,longportapp.com
+
+# ---- OpenAPI / 开发者 ----
+DOMAIN-SUFFIX,open.longbridge.com
+DOMAIN-SUFFIX,openapi.longbridge.com
+DOMAIN-SUFFIX,openapi-trade.longbridge.com
+DOMAIN-SUFFIX,openapi-quote.longbridge.com
+DOMAIN-SUFFIX,open.longportapp.com
+DOMAIN-SUFFIX,openapi.longportapp.com
+
+# ---- 静态资源 / CDN / 基础设施 ----
+DOMAIN-SUFFIX,lbkrs.com
+DOMAIN-SUFFIX,lbctrl.com
+DOMAIN-SUFFIX,lbrd.com
+DOMAIN-SUFFIX,lbkr.so
+DOMAIN-SUFFIX,assets.lbkrs.com
+DOMAIN-SUFFIX,assets.lbctrl.com
+DOMAIN-SUFFIX,assets.wbrks.com
+
+# ---- 行情 WebSocket ----
+DOMAIN-KEYWORD,longbridge-quote
+DOMAIN-KEYWORD,lb-quote
+DOMAIN-SUFFIX,quote.longbridge.com
+DOMAIN-SUFFIX,quote.longportapp.com
+
+# ---- 支持 & 帮助中心 ----
+DOMAIN-SUFFIX,support.longbridge.hk
+DOMAIN-SUFFIX,support.longbridge.global
+DOMAIN-SUFFIX,support.longportapp.com
+
+# ---- PortAI（AI 分析助手）----
+DOMAIN-KEYWORD,portai
+DOMAIN-SUFFIX,portai.com
+
+# ---- 关键词兜底（防漏匹配）----
+DOMAIN-KEYWORD,longbridge
+DOMAIN-KEYWORD,longbridgeapp
+DOMAIN-KEYWORD,longportapp
