@@ -2,10 +2,18 @@
 # Stash 覆写文件 (Override) —— 长桥证券 Longbridge
 # 用法：Stash → 覆写(Override) → 从 URL 添加 → 粘贴本文件 raw 链接
 #       → 应用到当前配置 → 重新载入
-# 分流策略组：🚀 节点选择（须与你配置 proxy-groups 中的组名一致，
-#            不一致请直接改本文件最后的 RULE-SET 行）
 # 更新日期：2026-06-14
 # ======================================================
+name: "长桥 Longbridge 分流"
+desc: "长桥/LongPort 域名分流；自带「长桥 Longbridge」策略组，默认跟随🚀 节点选择，可在 Stash 内单独切换"
+
+# 自带独立策略组：默认跟随主策略组「🚀 节点选择」，也可手动切到 DIRECT
+proxy-groups:
+  - name: 长桥 Longbridge
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
 
 rule-providers:
   LongBridge:
@@ -17,4 +25,4 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,LongBridge,🚀 节点选择
+  - RULE-SET,LongBridge,长桥 Longbridge

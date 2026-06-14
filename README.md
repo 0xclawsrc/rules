@@ -55,7 +55,12 @@ https://cdn.jsdelivr.net/gh/0xclawsrc/rules@main/ruleset/Claude.list
 | 仅长桥 | LongBridge | `https://raw.githubusercontent.com/0xclawsrc/rules/main/override/LongBridge.yaml` |
 | 长桥 + Claude | LongBridge + Claude | `https://raw.githubusercontent.com/0xclawsrc/rules/main/override/LongBridge-Claude.yaml` |
 
-> 覆写里的策略组为 `🚀 节点选择`，需与你配置 `proxy-groups` 中的组名一致；不一致就改这两个文件后再用。
+两个覆写都带 `name`/`desc`（导入后 Stash 里能看到名称与描述），并自带独立策略组：
+
+- `override/LongBridge.yaml` → 策略组「**长桥 Longbridge**」
+- `override/LongBridge-Claude.yaml` → 策略组「**长桥 Longbridge**」「**Claude AI**」
+
+> 这些策略组默认跟随你的主策略组 `🚀 节点选择`，导入后可在 Stash 里对长桥/Claude **单独切换**节点。如果你的主策略组不叫 `🚀 节点选择`，改文件里 `proxy-groups` 的 `proxies` 即可。
 
 ## 说明
 
