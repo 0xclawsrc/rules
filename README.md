@@ -34,9 +34,9 @@ rule-providers:
     path: ./ruleset/Claude.list
 
 rules:
-  # 把 PROXY 替换为你的策略组名称，例如「代理」或「自动选择」
-  - RULE-SET,LongBridge,PROXY
-  - RULE-SET,Claude,PROXY
+  # 🚀 节点选择 需与你 proxy-groups 中已有的组名一致
+  - RULE-SET,LongBridge,🚀 节点选择
+  - RULE-SET,Claude,🚀 节点选择
 ```
 
 ### 备用 CDN 地址（jsDelivr，部分网络下更快/更稳）
@@ -45,6 +45,17 @@ rules:
 https://cdn.jsdelivr.net/gh/0xclawsrc/rules@main/ruleset/LongBridge.list
 https://cdn.jsdelivr.net/gh/0xclawsrc/rules@main/ruleset/Claude.list
 ```
+
+## 覆写文件（Override，从 URL 添加）
+
+若你的 Stash 用「从 URL 添加覆写」，可直接订阅下面现成的覆写文件（已内置 `rule-providers` 引用 + `RULE-SET`，分流到 `🚀 节点选择`）：
+
+| 覆写 | 内容 | URL |
+| --- | --- | --- |
+| 仅长桥 | LongBridge | `https://raw.githubusercontent.com/0xclawsrc/rules/main/override/LongBridge.yaml` |
+| 长桥 + Claude | LongBridge + Claude | `https://raw.githubusercontent.com/0xclawsrc/rules/main/override/LongBridge-Claude.yaml` |
+
+> 覆写里的策略组为 `🚀 节点选择`，需与你配置 `proxy-groups` 中的组名一致；不一致就改这两个文件后再用。
 
 ## 说明
 
